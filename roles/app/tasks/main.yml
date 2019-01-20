@@ -1,0 +1,30 @@
+- name: "Install JRE"
+  yum:
+    name: java-1.8.0-openjdk
+    state: present
+    
+- name: "Creating directory"
+  file:
+    path: /opt/carrental
+    state: directory
+    mode: 0755
+    
+- name: "Creating user of service"
+  user:
+    name: "{{app_user}}"
+
+- name: "Copy jar file to app_server"
+  copy:
+    src: "{{jar_path}}"
+    dest: "{{app_path}}"
+    
+- name: "Copy systemd cfg"
+  template:
+    src: car_rental.service
+    dest: /etc/systemd/system/car_rental.service
+
+- name: "Start car rental app"
+  systemd:
+    name: car_rental.service
+    state: restarted
+    
