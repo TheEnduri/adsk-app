@@ -26,5 +26,5 @@
 - name: "Start car rental app"
   systemd:
     name: car_rental.service
-    state: restarted
+    state: started
     

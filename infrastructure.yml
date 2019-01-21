@@ -10,7 +10,6 @@
   become: yes
   tags: [app]
   roles:
-    - apache
     - app
     - telegraf
     
