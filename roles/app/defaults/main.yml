@@ -2,3 +2,4 @@
   jar_path: /home/ec2-user/environment/199693/adsk/zal/my-car-renta-spring/target/rentalapp-0.0.1-SNAPSHOT.jar
   app_path: /opt/carrental/carrental.jar
   app_user: appuser
+  tmp_jar_path: /home/ec2-user/environment/199625/ADSK/ZALICZENIE/zaliczenieRoles/my-car-renta-spring/target/carrental-0.0.1-SNAPSHOT.jar

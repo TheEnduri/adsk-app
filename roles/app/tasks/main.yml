@@ -15,7 +15,7 @@
 
 - name: "Copy jar file to app_server"
   copy:
-    src: "{{jar_path}}"
+    src: "{{tmp_jar_path}}"
     dest: "{{app_path}}"
     
 - name: "Copy systemd cfg"
@@ -26,5 +26,4 @@
 - name: "Start car rental app"
   systemd:
     name: car_rental.service
-    state: started
-    
+    state: restarted
